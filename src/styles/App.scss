@@ -1,7 +1,7 @@
 @media (min-width: 768px) {
     .main {
       display: grid;
-      grid-template-columns: 20rem 1fr;
+      grid-template-columns: 30rem 1fr;
     }
   }
 
@@ -14,13 +14,11 @@
     align-items: center;
   }
 
-  .header--logo{
+  .header_logo{
     width: 30%;
-    
   }
-  .loading_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 18rem;
+
+  .scenes_title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
+ 

@@ -18,8 +18,8 @@ const App = () => {
     <div className="page">
       <Header />
       <main className="main">
-        <section className="contacts">
-          <h2 className="contacts__title title--medium">Here you can find your wow</h2>
+        <section className="scenes">
+          <h2 className="scenes_title">Here you can find your wow</h2>
         </section>
       </main> 
     </div>

@@ -1,4 +1,4 @@
-import MovieSceneItem from "./MovieSceneItem";
+import MovieSceneDetail from "./MovieSceneDetail";
 import "../styles/App.scss";
 
 const MovieSceneItem = () => {
