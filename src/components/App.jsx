@@ -20,6 +20,8 @@ const App = () => {
   const handleChange = (value) => {
     setFilmFilter(value); 
   }
+
+  const filteredScenesByFilm = scenes.filter(scene=>scene.movie.toLowerCase().includes(filmFilter)); 
   
   return (
     <div className="page">
@@ -27,8 +29,8 @@ const App = () => {
       <main className="main">
         <section className="sectionList">
           <h2 className="sectionList_title">Here you can find your wow</h2>
-          <Filters filmFilter={filmFilter} handleChange={handleChange}/>
-          <MovieSceneList scenes={scenes}/>
+          <Filters filmFilter={filmFilter} handleChange={handleChange} />
+          <MovieSceneList scenes={filteredScenesByFilm} />
         </section>
       </main> 
     </div>

@@ -5,7 +5,7 @@ const getDataFromApi = () => {
     .then (data => {
       const cleanData = data.map (scenes => {
         return {
-        id: scenes.character,
+        id: scenes.timestamp,
         poster: scenes.poster,
         movie: scenes.movie,
         sentence: scenes.full_line,
