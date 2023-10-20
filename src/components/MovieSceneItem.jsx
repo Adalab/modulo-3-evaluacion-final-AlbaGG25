@@ -1,4 +1,4 @@
-import MovieSceneDetail from "./MovieSceneDetail";
+
 import "../styles/App.scss";
 
 const MovieSceneItem = ({scene}) => {
@@ -13,7 +13,7 @@ const MovieSceneItem = ({scene}) => {
       <h4>{scene.movie}</h4>
       <h4>{scene.year}</h4>
       <h5>{scene.sentence}</h5>
-      <h6 target="_blank"className="sceneCard_audio">{scene.audio}</h6>
+      <h6 target="_blank"className="sceneCard_audio">Listen to the wow</h6>
     </>
   )
 }
