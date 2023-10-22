@@ -14,9 +14,9 @@
   }
 
   .sectionList{
-  
    &_title {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center; 
   }
   }
   .sceneList{
@@ -41,6 +41,21 @@
     
   }
   &_movie{
-    font-size: 1.5rem;
+    font-size: 2.5rem;
+  }
+ }
+
+ .filter{
+  display:flex;
+  justify-content: space-around;
+  &_select{
+    font-size: 1.5rem; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-left: 25rem;
+  }
+  &_search{
+    font-size: 1.5rem; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-left: 25rem;
   }
  }

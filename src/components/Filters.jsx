@@ -1,7 +1,7 @@
 
 import FilterByFilm from './FilterByFilm' ;
 import FilterByYear from './FilterByYear' ;
-
+import "../styles/App.scss";
 
 const Filters = ({filmFilter, handleChange, yearFilter, handleChangeYear, years}) => {
 

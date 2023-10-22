@@ -1,3 +1,4 @@
+import "../styles/App.scss";
 
 const FilterByYear = ({yearFilter, handleChangeYear, years}) => {
   const handleSelectYear = (ev) =>{
@@ -12,9 +13,8 @@ const FilterByYear = ({yearFilter, handleChangeYear, years}) => {
 
   return (
     <>
-      <label htmlFor="search_year">
+      <label htmlFor="search_year" className="filter_select">
         Search by year: 
-        </label>
         <select
           name="search_year"
           id="search_year"
@@ -26,6 +26,7 @@ const FilterByYear = ({yearFilter, handleChangeYear, years}) => {
           </option>
           {renderYearOptions()}
         </select>
+      </label>
     </>
   );
 };
