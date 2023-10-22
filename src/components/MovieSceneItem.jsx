@@ -10,9 +10,9 @@ const MovieSceneItem = ({scene}) => {
       alt={scene.movie}
       title={scene.movie}
       />
-      <h4>{scene.movie}</h4>
-      <h4>{scene.year}</h4>
-      <h5>{scene.sentence}</h5>
+      <h4 className="sceneCard_movie">{scene.movie}</h4>
+      <h4 className="sceneCard_year">{scene.year}</h4>
+      <h5 className="sceneCard_sentence">{scene.sentence}</h5>
       <h6 target="_blank"className="sceneCard_audio">Listen to the wow</h6>
     </>
   )

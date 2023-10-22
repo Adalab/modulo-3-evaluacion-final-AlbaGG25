@@ -2,9 +2,9 @@ import MovieSceneItem from "./MovieSceneItem";
 import "../styles/App.scss";
 
 const MovieSceneList = ({scenes}) => {
-  const renderScenes =scenes.map((scene) => { 
+  const renderScenes = scenes.map((scene, id) => { 
   return (
-    <li className="sceneCard" key={scene.id}>
+    <li className="sceneCard" key={id}>
         <MovieSceneItem scene={scene}/>
     </li>
   );
