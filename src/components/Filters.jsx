@@ -4,8 +4,13 @@ import FilterByYear from './FilterByYear' ;
 
 
 const Filters = ({filmFilter, handleChange, yearFilter, handleChangeYear, years}) => {
+
+  const handleSubmit = (ev) =>{
+    ev.preventDefault(); 
+  }
+
   return (
-   <form className="filters" >
+   <form className="filters" onSubmit={handleSubmit}>
      <FilterByFilm 
      filmFilter={filmFilter} 
      handleChange={handleChange}

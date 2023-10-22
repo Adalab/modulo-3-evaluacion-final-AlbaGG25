@@ -9,7 +9,6 @@ const FilterByYear = ({yearFilter, handleChangeYear, years}) => {
        return <option key={id} value={year}>{year}</option>
   });
   };
-  console.log(renderYearOptions())
 
   return (
     <>
