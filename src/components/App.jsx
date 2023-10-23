@@ -7,6 +7,7 @@ import Header from "./Header";
 import MovieSceneList from "./MovieSceneList";
 import MovieSceneDetail from "./MovieSceneDetail";
 import Filters from "./Filters";
+import Footer from "./Footer";
 import getDataFromApi from '../services/Services'; 
 import ls from '../services/ls'; 
 
@@ -27,6 +28,8 @@ const App = () => {
         ls.set ('scenes', cleanData);
       })
     }
+    scenes.sort()
+  
     }, []);
 
 ///handle function search by film
@@ -44,7 +47,7 @@ const App = () => {
   .filter((scene)=>{
     return filmFilter === ''
     ? true 
-    : scene.movie.toLowerCase().includes(filmFilter)
+    : scene.movie.toLowerCase().includes(filmFilter.toLowerCase())
   })
   .filter (scene => {
     if (yearFilter === ''){
@@ -90,7 +93,7 @@ const App = () => {
                   />
              </section>
              <section className="sectionList">
-               {filteredScenes.length === 0 ? (<p>The title you&apos;re looking for doesn&apos;t exist. Try again, please</p>):(<MovieSceneList scenes={filteredScenes} 
+               {filteredScenes.length === 0 ? (<p className='sectionList_error'>The title you&apos;re looking for doesn&apos;t exist. Try again, please</p>):(<MovieSceneList scenes={filteredScenes} 
                />)}
              </section>
             </>
@@ -101,11 +104,10 @@ const App = () => {
             <MovieSceneDetail scenes={sceneDetail}/>
            }
            />
-
-
         </Routes>
-       
+       <Footer />
       </main> 
+    
     </div>
   );
 };

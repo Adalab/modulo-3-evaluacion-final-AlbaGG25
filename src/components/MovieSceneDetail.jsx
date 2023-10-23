@@ -12,10 +12,10 @@ const MovieSceneDetail = ({scenes}) => {
       title={scenes.movie}
       />
       <h4 className="sceneDetail_movie">{scenes.movie}</h4>
-      <h5 className="sceneDetail_director">{scenes.director}</h5>
+      <h5 className="sceneDetail_director"><i className="fa-solid fa-clapperboard"></i> {scenes.director}</h5>
       <h6 className="sceneDetail_sentence">&quot;{scenes.sentence}&quot;</h6>
-      <a href={scenes.audio} target="_blank" rel="nonreferrer" className="sceneDetail_audio"><i className="fa-solid fa-volume-high"></i>Listen to the wow</a>
-      <Link to="/" ><i class="fa-solid fa-circle-chevron-left"></i>Volver
+      <a href={scenes.audio} target="_blank" rel="noreferrer" className="sceneDetail_audio"><i className="fa-solid fa-volume-high"></i>Listen to the wow</a>
+      <Link to="/" className="sceneDetail_goback"><i className="fa-solid fa-circle-chevron-left "></i>Volver
       </Link>
     </div>
     </>
