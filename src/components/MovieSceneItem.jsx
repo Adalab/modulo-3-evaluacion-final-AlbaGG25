@@ -4,7 +4,7 @@ import "../styles/App.scss";
 const MovieSceneItem = ({scene}) => {
   return (
     <>
-    <Link to={"/user/" + scene.id} className="sceneDetail_goback">
+    <Link to={"/film/" + scene.id} className="sceneDetail_goback">
       <img 
       className="sceneCard_img"
       src={scene.poster}

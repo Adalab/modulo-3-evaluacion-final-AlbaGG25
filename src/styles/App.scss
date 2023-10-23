@@ -43,6 +43,17 @@
 
 .sectionList{
   padding-block: 6rem;
+  &_error {
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+      @media (min-width: 768px){
+        font-size: 2rem;
+      }
+      @media (min-width: 1200px){
+        font-size: 2rem;
+      }
+  }
 }
   
 .sceneList{

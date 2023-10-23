@@ -67,7 +67,7 @@ const App = () => {
 
 /////find id 
   const {pathname} = useLocation();
-  const routeInfo = matchPath ("/user/:id", pathname);
+  const routeInfo = matchPath ("/film/:id", pathname);
   const sceneCardId = routeInfo !== null ? routeInfo.params.id : ""; 
 
 ////find scene card detail by id
@@ -99,7 +99,7 @@ const App = () => {
             </>
            } />
           <Route 
-           path= "/user/:id"
+           path= "/film/:id"
            element={
             <MovieSceneDetail scenes={sceneDetail}/>
            }
