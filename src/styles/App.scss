@@ -79,3 +79,30 @@
  
   }
  }
+
+.sceneDetail{
+  border: solid 1px grey; 
+  margin-inline: 20%;
+  margin-block: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &_img{
+    max-width: 50%;
+    text-align: center;
+    padding-block: 1rem;
+  }
+  &_movie{
+    font-size: 2rem;
+  }
+  &_year{
+    font-size: 2rem;
+  }
+  &_sentence{
+      font-size: 1.5rem;
+  }
+  &_audio{
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+  }
+}

@@ -11,7 +11,8 @@ const getDataFromApi = () => {
         movie: scenes.movie,
         sentence: scenes.full_line,
         year: scenes.year,
-        audio: scenes.audio
+        audio: scenes.audio,
+        director: scenes.director
       }
       });
       return cleanData;

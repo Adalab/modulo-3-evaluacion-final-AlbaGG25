@@ -1,21 +1,23 @@
-
+import { Link } from "react-router-dom";
 import "../styles/App.scss";
 
 const MovieSceneDetail = ({scenes}) => {
   return (
     <>
-     <>
+     <div className="sceneDetail">
       <img 
-      className="sceneCard_img"
+      className="sceneDetail_img"
       src={scenes.poster}
       alt={scenes.movie}
       title={scenes.movie}
       />
-      <h4 className="sceneCard_movie">{scenes.movie}</h4>
-      <h4 className="sceneCard_year">{scenes.year}</h4>
-      <h5 className="sceneCard_sentence">{scenes.sentence}</h5>
-      <h6 target="_blank"className="sceneCard_audio"> {scenes.audio}Listen to the wow</h6>
-    </>
+      <h4 className="sceneDetail_movie">{scenes.movie}</h4>
+      <h5 className="sceneDetail_director">{scenes.director}</h5>
+      <h6 className="sceneDetail_sentence">&quot;{scenes.sentence}&quot;</h6>
+      <a href={scenes.audio} target="_blank" rel="nonreferrer" className="sceneDetail_audio"><i className="fa-solid fa-volume-high"></i>Listen to the wow</a>
+      <Link to="/" ><i class="fa-solid fa-circle-chevron-left"></i>Volver
+      </Link>
+    </div>
     </>
   )
 }
