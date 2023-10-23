@@ -13,7 +13,7 @@ const FilterByYear = ({yearFilter, handleChangeYear, years}) => {
 
   return (
     <>
-      <label htmlFor="search_year" className="filter_select">
+      <label htmlFor="search_year" className="filters_select">
         Search by year: 
         <select
           name="search_year"

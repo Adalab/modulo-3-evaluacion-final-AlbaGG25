@@ -2,19 +2,19 @@ import MovieSceneItem from "./MovieSceneItem";
 import "../styles/App.scss";
 
 const MovieSceneList = ({scenes}) => {
+
   const renderScenes = scenes.map((scene, id) => { 
-  return (
+   return (
     <li className="sceneCard" key={id}>
         <MovieSceneItem scene={scene}/>
-    </li>
-  );
-  });
-
+    </li>)
+  })
 
   return (
     <>
      <ul className="sceneList">{renderScenes}</ul>
     </>
+  
   )
 }
 

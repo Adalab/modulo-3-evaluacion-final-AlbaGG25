@@ -6,7 +6,7 @@ const FilterByFilm = ({filmFilter, handleChange}) => {
 
   return (
     <>
-      <label htmlFor='search_film' className="filter_search">
+      <label htmlFor='search_film' className="filters_search">
         Search by film: 
         <input 
         type='text'

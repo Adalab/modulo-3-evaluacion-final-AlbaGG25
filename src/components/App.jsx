@@ -1,10 +1,13 @@
 import React from 'react';
 import { useState, useEffect} from 'react';
+import { Routes, Route } from "react-router-dom";
+
 import Header from "./Header";
 import MovieSceneList from "./MovieSceneList";
 import Filters from "./Filters";
 import getDataFromApi from '../services/Services'; 
 import ls from '../services/ls'; 
+
 import "../styles/App.scss";
 
 
@@ -36,7 +39,11 @@ const App = () => {
 
 /////filter 
   const filteredScenes = scenes
-  .filter(scene=>scene.movie.toLowerCase().includes(filmFilter))
+  .filter((scene)=>{
+    return filmFilter === ''
+    ? true 
+    : scene.movie.toLowerCase().includes(filmFilter)
+  })
   .filter (scene => {
     if (yearFilter === ''){
       return true
@@ -57,8 +64,8 @@ const App = () => {
     <div className="page">
       <Header />
       <main className="main">
-        <section className="sectionList">
-          <h2 className="sectionList_title">Here you can find your wow</h2>
+        <section className="sectionFilters">
+          <h2 className="sectionFilters_title">Here you can find your wow</h2>
           <Filters 
           filmFilter={filmFilter} 
           handleChange={handleChange}
@@ -66,9 +73,10 @@ const App = () => {
           handleChangeYear={handleChangeYear}
           years = {getYears()}
           />
-          <MovieSceneList 
-          scenes={filteredScenes} 
-          />
+        </section>
+        <section className="sectionList">
+          {filteredScenes.length === 0 ? (<p>The title you&apos;re looking for doesn&apos;t exist. Try again, please</p>):(<MovieSceneList scenes={filteredScenes} 
+          />)}
         </section>
       </main> 
     </div>

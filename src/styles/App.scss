@@ -1,3 +1,9 @@
+ *{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+ }
+ 
  html {
   font-size: 62.5%; 
  }
@@ -13,15 +19,18 @@
     }
   }
 
-  .sectionList{
+  .sectionFilters{
    &_title {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center; 
   }
+
   }
+  
   .sceneList{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem; 
   }
 
@@ -35,27 +44,38 @@
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   padding-left: 0.8rem;
   padding-right: 0.8rem;
+  margin: 0; 
   &_img{
-    max-width: 30rem;
+    max-width: 40rem;
     padding-top: 1rem;
-    
   }
   &_movie{
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
- }
+  &_year{
+    font-size: 2rem;
+  }
+  &_sentence{
+      font-size: 1.5rem;
+  }
+  &_audio{
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+  }
+}
 
- .filter{
+ .filters{
   display:flex;
   justify-content: space-around;
+  margin-block: 3rem;
   &_select{
     font-size: 1.5rem; 
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding-left: 25rem;
+  
   }
   &_search{
     font-size: 1.5rem; 
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding-left: 25rem;
+ 
   }
  }
