@@ -1,9 +1,11 @@
 import React from 'react';
 import { useState, useEffect} from 'react';
 import { Routes, Route } from "react-router-dom";
+import { useLocation, matchPath } from "react-router";
 
 import Header from "./Header";
 import MovieSceneList from "./MovieSceneList";
+import MovieSceneDetail from "./MovieSceneDetail";
 import Filters from "./Filters";
 import getDataFromApi from '../services/Services'; 
 import ls from '../services/ls'; 
@@ -23,7 +25,7 @@ const App = () => {
       getDataFromApi().then ((cleanData) => {
         setScenes(cleanData);
         ls.set ('scenes', cleanData);
-      });
+      })
     }
     }, []);
 
@@ -59,25 +61,50 @@ const App = () => {
   const singlesArray = [...singleYears];
   return singlesArray; 
   }
+
+/////find id 
+  const {pathname} = useLocation();
+  const routeInfo = matchPath ("/user/:id", pathname);
+  const sceneCardId = routeInfo !== null ? routeInfo.params.id : ""; 
+
+////find scene card detail by id
+  const sceneDetail = scenes.find(scene=>scene.id === sceneCardId); 
   
   return (
     <div className="page">
       <Header />
       <main className="main">
-        <section className="sectionFilters">
-          <h2 className="sectionFilters_title">Here you can find your wow</h2>
-          <Filters 
-          filmFilter={filmFilter} 
-          handleChange={handleChange}
-          yearFilter={yearFilter}
-          handleChangeYear={handleChangeYear}
-          years = {getYears()}
-          />
-        </section>
-        <section className="sectionList">
-          {filteredScenes.length === 0 ? (<p>The title you&apos;re looking for doesn&apos;t exist. Try again, please</p>):(<MovieSceneList scenes={filteredScenes} 
-          />)}
-        </section>
+        <Routes>
+           <Route 
+           path = "/"
+           element = {
+            <>
+             <section className="sectionFilters">
+               <h2 className="sectionFilters_title">Here you can find your wow</h2>
+                 <Filters 
+                  filmFilter={filmFilter} 
+                  handleChange={handleChange}
+                  yearFilter={yearFilter}
+                  handleChangeYear={handleChangeYear}
+                  years = {getYears()}
+                  />
+             </section>
+             <section className="sectionList">
+               {filteredScenes.length === 0 ? (<p>The title you&apos;re looking for doesn&apos;t exist. Try again, please</p>):(<MovieSceneList scenes={filteredScenes} 
+               />)}
+             </section>
+            </>
+           } />
+          <Route 
+           path= "/user/:id"
+           element={
+            <MovieSceneDetail scenes={sceneDetail}/>
+           }
+           />
+
+
+        </Routes>
+       
       </main> 
     </div>
   );
