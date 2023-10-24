@@ -1,5 +1,6 @@
 import uuid from 'react-uuid';
 
+////get data from API and clean the data to obtain only the info I need
 const getDataFromApi = () => {
    return fetch ('https://owen-wilson-wow-api.onrender.com/wows/random?results=50')
     .then (response => response.json())

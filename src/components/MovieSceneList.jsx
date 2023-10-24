@@ -1,4 +1,5 @@
 import MovieSceneItem from "./MovieSceneItem";
+import PropTypes from "prop-types";
 import "../styles/App.scss";
 
 
@@ -18,5 +19,10 @@ const MovieSceneList = ({scenes}) => {
   
   )
 }
+
+MovieSceneList.propTypes = {
+  scenes: PropTypes.array,
+};
+
 
 export default MovieSceneList;
