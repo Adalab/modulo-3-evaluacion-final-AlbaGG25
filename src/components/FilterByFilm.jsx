@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 
 const FilterByFilm = ({filmFilter, handleChange}) => {
   const handleInput = (ev) =>{
@@ -20,5 +21,10 @@ const FilterByFilm = ({filmFilter, handleChange}) => {
     </>
   )
 }
+
+FilterByFilm.propTypes = {
+  filmFilter: PropTypes.string,
+  handleChange: PropTypes.func,
+};
 
 export default FilterByFilm; 

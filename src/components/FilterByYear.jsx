@@ -1,4 +1,5 @@
 import "../styles/App.scss";
+import PropTypes from "prop-types";
 
 const FilterByYear = ({yearFilter, handleChangeYear, years}) => {
   const handleSelectYear = (ev) =>{
@@ -8,7 +9,7 @@ const FilterByYear = ({yearFilter, handleChangeYear, years}) => {
   const renderYearOptions = () => {
      return years.map ((year, id) => {
        return <option key={id} value={year}>{year}</option>
-  });
+      })
   };
 
   return (
@@ -32,4 +33,9 @@ const FilterByYear = ({yearFilter, handleChangeYear, years}) => {
   );
 };
 
+FilterByYear.propTypes = {
+  years: PropTypes.array,
+  yearFilter: PropTypes.string,
+  handleChangeYear: PropTypes.func,
+};
 export default FilterByYear;

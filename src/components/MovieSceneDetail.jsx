@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "../styles/App.scss";
+import PropTypes from "prop-types";
 
 const MovieSceneDetail = ({scenes}) => {
   return (
@@ -21,5 +22,8 @@ const MovieSceneDetail = ({scenes}) => {
     </>
   )
 }
+MovieSceneDetail.propTypes = {
+  scenes: PropTypes.object,
+};
 
 export default MovieSceneDetail;

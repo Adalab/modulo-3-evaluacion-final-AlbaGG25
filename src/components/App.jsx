@@ -28,8 +28,6 @@ const App = () => {
         ls.set ('scenes', cleanData);
       })
     }
-    scenes.sort()
-  
     }, []);
 
 ///handle function search by film
