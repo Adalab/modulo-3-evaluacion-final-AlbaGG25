@@ -10,6 +10,7 @@ const FilterByYear = ({yearFilter, handleChangeYear, years}) => {
      return years.map ((year, id) => {
        return <option key={id} value={year}>{year}</option>
       })
+      .sort((a,b)=> b-a); 
   };
 
   return (
