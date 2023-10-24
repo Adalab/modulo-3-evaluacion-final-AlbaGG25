@@ -41,6 +41,7 @@
     }
   }
 
+
 .sectionList{
   padding-block: 6rem;
   &_error {
@@ -57,7 +58,7 @@
   }
 }
   
-.sceneList{
+  .sceneList{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -66,66 +67,66 @@
   }
 
  .sceneCard{
-  background-color: #3d78a1;
-  border-radius: 10px;
-  width: 60%; 
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem; 
-  text-align: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
-  padding-inline: 0.8rem;
-  @media (min-width: 768px){
-    width: 30%;
-  }
-  @media (min-width: 1200px){
-    width: 20%;
-  }
-  &_img{
-    max-width: 90%;
-    padding-block: 1rem;
-  }
-  &_movie{
-    font-size: 1rem;
-    padding-block: 1rem;
+    background-color: #3d78a1;
+    border-radius: 10px;
+    width: 60%; 
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; 
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    padding-inline: 0.8rem;
     @media (min-width: 768px){
-      font-size: 1.5rem;
+      width: 30%;
     }
     @media (min-width: 1200px){
-      font-size: 2rem;
+      width: 20%;
     }
-  }
-  &_year{
-    font-size: 1rem;
-    padding-block: 1rem;
-    @media (min-width: 768px){
-      font-size: 1.5rem;
+    &_img{
+      max-width: 90%;
+      padding-block: 1rem;
     }
-    @media (min-width: 1200px){
-      font-size: 2rem;
-    }
-  }
-  &_sentence{
+    &_movie{
       font-size: 1rem;
-      padding-bottom: 1rem;
+      padding-block: 1rem;
       @media (min-width: 768px){
         font-size: 1.5rem;
       }
       @media (min-width: 1200px){
-        font-size: 1.7rem;
+        font-size: 2rem;
       }
+    }
+    &_year{
+      font-size: 1rem;
+      padding-block: 1rem;
+      @media (min-width: 768px){
+        font-size: 1.5rem;
+      }
+      @media (min-width: 1200px){
+        font-size: 2rem;
+      }
+    }
+    &_sentence{
+        font-size: 1rem;
+        padding-bottom: 1rem;
+        @media (min-width: 768px){
+          font-size: 1.5rem;
+        }
+        @media (min-width: 1200px){
+          font-size: 1.7rem;
+        }
+    }
   }
-}
 
- .sectionFilters{
-  &_title {
-   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
-   text-align: center; 
-   @media (min-width: 768px){
-    font-size: 2rem;
+  .sectionFilters{
+   &_title {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    text-align: center; 
+    @media (min-width: 768px){
+     font-size: 2rem;
+   }
   }
- }
- }
+  }
 
  .filters{
   display:flex;
@@ -233,7 +234,7 @@
 }
 
 .footer {
-  padding-block: 3rem;
+  padding-block: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
