@@ -1,4 +1,3 @@
-Evaluación del Módulo 3 de Alba Ginés García
 
 Welcome to the Owen Wilson's "WoW" Search Page!
 
