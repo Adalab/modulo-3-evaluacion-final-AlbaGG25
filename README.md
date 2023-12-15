@@ -13,7 +13,7 @@ Also you will be able to click on any film and get the relevant details: such as
 
 
 🛠️ Installation
-Use $ git clone https://github.com/Adalab/modulo-3-evaluacion-final-AlbaGG25.git
+Use $ git clone https://github.com/AlbaGG25/owenAPI.git
 
 
 Project features
