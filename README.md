@@ -27,7 +27,7 @@ Project features
 The project gets the information from an API: https://owen-wilson-wow-api.onrender.com/
 
 Project access
-http://beta.adalab.es/modulo-3-evaluacion-final-AlbaGG25/
+albagg25.github.io/owenAPI/
 
 ✒️ Author
 @AlbaGG25
