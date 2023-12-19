@@ -7,7 +7,9 @@ const FilterByYear = ({yearFilter, handleChangeYear, years}) => {
   };
   
   const renderYearOptions = () => {
-     return years.map ((year, id) => {
+     return years
+     .sort((a,b)=>a-b)
+     .map ((year, id) => {
        return <option key={id} value={year}>{year}</option>
       })
   };

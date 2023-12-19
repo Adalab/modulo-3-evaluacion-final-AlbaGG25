@@ -72,7 +72,7 @@ const App = () => {
   const sceneDetail = scenes.find(scene=>scene.id === sceneCardId); 
   
   return (
-    <div className="page">
+    <body className="page">
       <Header />
       <main className="main">
         <Routes>
@@ -106,7 +106,7 @@ const App = () => {
        <Footer />
       </main> 
     
-    </div>
+    </body>
   );
 };
 

@@ -11,6 +11,7 @@ const FilterByFilm = ({filmFilter, handleChange}) => {
         Search by film:  
         <input 
         className="filters_search-input"
+        placeholder="Film name..."
         type='text'
         name='search_film'
         id='search_film'
