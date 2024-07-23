@@ -7,12 +7,15 @@ The page has a search system that allows you to find all those amazing "wow's" b
 Also you will be able to click on any film and get the relevant details: such as director, film title, the exact sentence where Owen says "wow" and an audio file to listen to it.
 
 🧰 This project has been built with:
+
    ReactJS
+   Vite
    HTML
    SASS
 
 
 🛠️ Installation
+
 Use $ git clone https://github.com/AlbaGG25/owenAPI.git
 
 
@@ -27,7 +30,9 @@ Project features
 The project gets the information from an API: https://owen-wilson-wow-api.onrender.com/
 
 Project access
+
 albagg25.github.io/owenAPI/
 
 ✒️ Author
+
 @AlbaGG25
